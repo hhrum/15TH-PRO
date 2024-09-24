@@ -96,8 +96,10 @@ body {
     transition: all var(--hover-transition);
 }
 
-.header__nav a:hover {
-    color: var(--accent-color)
+@media screen and (hover: hover) {
+    .header__nav a:hover {
+        color: var(--accent-color)
+    }
 }
 
 .header__burger {
@@ -115,14 +117,17 @@ body {
     font-family: var(--console-font) !important;
     color: #3B6200;
     font-size: 24px;
+    text-decoration: none;
 
     box-shadow: 0 0 18px 0 #BAFF0088;
     transition: all var(--hover-transition);
     cursor: pointer;
 }
 
-.button:hover {
-    box-shadow: 0 0 32px 0 #BAFF00;
+@media screen and (hover: hover) {
+    .button:hover {
+        box-shadow: 0 0 32px 0 #BAFF00;
+    }
 }
 
 /* Title */
@@ -251,19 +256,26 @@ body {
     transition: all var(--hover-transition);
 }
 
-.service-nav a:hover {
-    background-color: #1D1D1D;
-    color: var(--white-color);
+@media screen and (hover: hover) {
+    .service-nav a:hover {
+        background-color: #1D1D1D;
+        color: var(--white-color);
+    }
 }
 
 /* INTRO */
 .intro .row {
     height: 100%;
 }
-.intro .row > div {
+
+.intro .row>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.intro__title {
+    margin-top: 24px;
 }
 
 .intro__subtitle {
@@ -284,6 +296,10 @@ body {
 @media screen and (min-width: 768px) {
     .intro {
         height: 500px;
+    }
+
+    .intro__title {
+        margin-top: 0;
     }
 }
 
@@ -363,7 +379,7 @@ body {
 .team-member__avatar {
     position: relative;
     z-index: 2;
-    
+
     width: 100%;
 }
 
@@ -423,10 +439,12 @@ body {
     flex-direction: row-reverse;
 }
 
-.our-project:hover {
-    border-color: var(--accent-color);
-
-    box-shadow: 0 4px 18px 0 #BAFF0088;
+@media screen and (hover: hover) {
+    .our-project:hover {
+        border-color: var(--accent-color);
+    
+        box-shadow: 0 4px 18px 0 #BAFF0088;
+    }
 }
 
 .our-project__info {
@@ -512,10 +530,12 @@ body {
     color: var(--accent-color)
 }
 
-.our-projects__show-more:hover {
-    border-color: var(--accent-color);
-
-    box-shadow: 0 0 18px 0 #BAFF0088;
+@media screen and (hover: hover) {
+    .our-projects__show-more:hover {
+        border-color: var(--accent-color);
+    
+        box-shadow: 0 0 18px 0 #BAFF0088;
+    }
 }
 
 @media screen and (min-width: 768px) {
