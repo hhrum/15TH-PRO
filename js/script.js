@@ -127,9 +127,24 @@ $(document).ready(function () {
     const $targetElement = $('.with-green-border');
     const cornerSize = 10;
     $targetElement.each(function () {
-        delay =  $(this).data('delay') || 0
-        
-        setTimeout(() => createSvgBorderForElement($(this), cornerSize, true), delay)
+        const handler = () => createSvgBorderForElement($(this), cornerSize, true)
+
+        onLoadSelector = $(this).data('onload-selector')
+        delay = $(this).data('delay') || 0
+
+        if (onLoadSelector) {
+            $onLoadElement = $(onLoadSelector)
+
+            if ($onLoadElement.get(0).complete) {
+                setTimeout(handler, delay)
+            } else {
+                $onLoadElement.on('load', function () {
+                    setTimeout(handler, delay)
+                })
+            }
+        } else {
+            setTimeout(handler, delay)
+        }
     })
 
     // Обновление обводки при изменении размеров окна

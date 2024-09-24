@@ -672,7 +672,9 @@ body {
 }
 
 .contacts-info__value {
+    color: #000;
     font-size: 32px;
+    text-decoration: none;
 }
 
 .contacts-info__footer-text {
