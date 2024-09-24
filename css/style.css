@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'ConsoleFont';
-    src: url('/fonts/classic_console_neue/clacon2.woff2') format('woff2');
+    src: url('../fonts/classic_console_neue/clacon2.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -28,7 +28,7 @@ body {
 }
 
 body {
-    background: top / 50% repeat url('/images/grid.png');
+    background: top / 50% repeat url('../images/grid.png');
     background-color: var(--bg-color);
     padding-top: calc(var(--header-top-space) + var(--header-height));
 
@@ -766,7 +766,7 @@ footer {
     align-items: center;
 
     color: var(--white-color);
-    ;
+    text-decoration: none;
 }
 
 .footer__logo img {
